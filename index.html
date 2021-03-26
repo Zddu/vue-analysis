@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<div id="app">
+  <p>{{name}}</p>
+  <p>{{name}}</p>
+  <p k-text="name"></p>
+  <p>{{age}}</p>
+  <p>
+    {{doubleAge}}
+  </p>
+  <input type="text" k-model="name">
+  <button @click="changeName">呵呵</button>
+  <div k-html="html"></div>
+</div>
+
+<body>
+<script src="./vue/compile.js"></script>
+<script src="./vue/dep.js"></script>
+<script src="./vue/watcher.js"></script>
+<script src="./vue/Vue.js"></script>
+  <script>
+    const vm = new Vue({
+      el: '#app',
+      data: {
+        name: "I am test.",
+        age: 12,
+        html: '<button>这是一个按钮</button>'
+      },
+    })
+
+  </script>
+</body>
+
+</html>
